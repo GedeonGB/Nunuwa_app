@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_margin="8dp"
+    android:id="@+id/cardItem"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:focusable="true"
+    app:cardCornerRadius="4dp"
+    android:clickable="true"
+    android:elevation="4dp"
+    android:layout_height="150dp"
+    tools:targetApi="lollipop">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/card_Prom"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:layout_margin="0dp"
+        android:elevation="5dp"
+        android:clickable="true"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        tools:targetApi="lollipop">
+
+
+
+        <ImageView
+            android:src="@drawable/img9"
+            android:scaleType="centerCrop"
+            android:id="@+id/ItemImageCart"
+            android:layout_width="130dp"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+
+            android:layout_toEndOf="@+id/ItemImageCart"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_weight="3"
+                android:layout_margin="5dp"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_alignParentTop="true"
+                    android:id="@+id/lindet1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/txtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="1dp"
+                        android:fontFamily="sans-serif-thin"
+                        android:text="Name: "
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/itemName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:textStyle="bold"
+                        android:fontFamily="sans-serif-light"
+                        android:text="Hand bag"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="15sp" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:id="@+id/lindet2"
+                    android:layout_marginTop="3dp"
+                    android:layout_below="@+id/lindet1"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/txtitle2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:fontFamily="sans-serif-thin"
+                        android:text="Price: "
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/itemPrice"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:textStyle="bold"
+                        android:fontFamily="sans-serif-light"
+                        android:text="$8.70"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:id="@+id/lindet3"
+                    android:layout_marginTop="3dp"
+                    android:layout_below="@+id/lindet2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/txtitle3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="1dp"
+                        android:fontFamily="sans-serif-thin"
+                        android:text="Shop: "
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/itemSHop"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:textStyle="bold"
+                        android:fontFamily="sans-serif-light"
+                        android:text="XingXung"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="15sp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:id="@+id/lindet4"
+                    android:layout_marginTop="6dp"
+                    android:layout_below="@+id/lindet3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/txtitle4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="1dp"
+                        android:fontFamily="sans-serif-thin"
+                        android:text="Date: "
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/itemDte"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:textStyle="bold"
+                        android:fontFamily="sans-serif-light"
+                        android:text="12-10-2019"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="13sp" />
+
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <View
+                android:background="@color/colorPrimaryGry"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="-12dp"
+                android:layout_height="1dp" />
+
+            <RelativeLayout
+                android:orientation="horizontal"
+                android:layout_weight="2"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="4dp"
+                android:layout_gravity="bottom"
+                android:gravity="bottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+
+                <TextView
+                    android:id="@+id/btndelete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:fontFamily="serif"
+                    android:text="Remove"
+                    android:layout_gravity="center"
+                    android:padding="4dp"
+                    android:textAllCaps="false"
+                    android:gravity="center"
+                    android:drawableStart="@drawable/ic_delete_black_24dp"
+                    android:textColor="#111"
+                    android:textSize="14sp" />
+
+
+                <LinearLayout
+                    android:layout_gravity="end"
+                    android:gravity="end"
+                    android:layout_width="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:paddingEnd="6dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/btnPlusCrt"
+                        android:layout_width="wrap_content"
+                        android:paddingEnd="8dp"
+                        android:paddingStart="8dp"
+                        android:paddingBottom="3dp"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:layout_toEndOf="@+id/btndelete"
+                        android:background="@drawable/cerclebackgroundpink"
+                        android:fontFamily="sans-serif-light"
+                        android:text="+"
+                        android:textAllCaps="false"
+                        android:textColor="#fff"
+                        android:textSize="19sp" />
+
+                    <TextView
+                        android:id="@+id/num_crt_item"
+                        android:layout_width="wrap_content"
+                        android:paddingEnd="8dp"
+                        android:paddingStart="8dp"
+                        android:gravity="center"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_toEndOf="@+id/btndelete"
+                        android:fontFamily="serif"
+                        android:text="3"
+                        android:textAllCaps="false"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="19dp" />
+
+                    <TextView
+                        android:id="@+id/btnMinusCrt"
+                        android:layout_width="wrap_content"
+                        android:paddingEnd="10dp"
+                        android:paddingStart="10dp"
+                        android:gravity="center"
+                        android:paddingBottom="4dp"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:layout_toEndOf="@+id/btndelete"
+                        android:background="@drawable/cerclebackgroundpink"
+                        android:fontFamily="sans-serif-light"
+                        android:text="-"
+                        android:textAllCaps="false"
+                        android:textColor="#fff"
+                        android:textSize="19dp" />
+
+                </LinearLayout>
+
+
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
+

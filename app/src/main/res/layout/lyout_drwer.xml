@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.gauravk.bubblenavigation.BubbleNavigationLinearView
+        android:id="@+id/bot_navigation_Lin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimaryGry"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:elevation="4dp"
+        android:padding="6dp"
+        android:weightSum="4"
+        tools:targetApi="lollipop">
+
+        <TextView
+            android:id="@+id/textBUbble"
+            android:background="@drawable/rounded_rect"
+            android:padding="4dp"
+            android:visibility="gone"
+            android:text="here is it"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <com.gauravk.bubblenavigation.BubbleToggleView
+            android:id="@+id/c_myccout"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            app:bt_active="false"
+            android:fontFamily="serif"
+            android:layout_gravity="start"
+            app:bt_badgeTextSize="10sp"
+            android:gravity="start"
+            app:bt_colorInactive="@color/colorPrimary"
+            app:bt_icon="@drawable/ic_person_outline_black_24dp"
+            app:bt_shape="@drawable/edittext"
+            app:bt_padding="5dp"
+            app:bt_title="@string/account"
+            app:bt_colorActive="@color/colorLinks2"
+            app:bt_titlePadding="0dp" />
+
+
+        <com.gauravk.bubblenavigation.BubbleToggleView
+            android:id="@+id/myhome"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:fontFamily="serif"
+            android:layout_height="wrap_content"
+            app:bt_badgeTextSize="10sp"
+            app:bt_active="false"
+            app:bt_colorInactive="@color/colorPrimary"
+            app:bt_icon="@drawable/ic_home_black_24dp"
+            app:bt_shape="@drawable/edittext"
+            app:bt_padding="5dp"
+            app:bt_title="@string/Home"
+            app:bt_colorActive="@color/colorLinks"
+            app:bt_titlePadding="0dp"  />
+
+        <com.gauravk.bubblenavigation.BubbleToggleView
+            android:id="@+id/myorders"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            app:bt_badgeTextSize="11sp"
+            app:bt_active="false"
+            app:bt_colorActive="@color/colorLinks3"
+            app:bt_titlePadding="0dp"
+            android:fontFamily="serif"
+            app:bt_shape="@drawable/edittext"
+            app:bt_padding="5dp"
+            app:bt_colorInactive="@color/colorPrimary"
+            app:bt_icon="@drawable/ic_next_week_black_24dp"
+            app:bt_title="@string/orders" />
+
+
+        <com.gauravk.bubblenavigation.BubbleToggleView
+            android:id="@+id/myct"
+            android:layout_width="0dp"
+            app:bt_badgeTextSize="8sp"
+            android:layout_weight="0"
+            android:layout_height="wrap_content"
+            app:bt_active="false"
+            android:visibility="gone"
+            app:bt_colorActive="@color/colorLinks1"
+            app:bt_colorInactive="@color/colorPrimary"
+            app:bt_icon="@drawable/ic_favorite_black_24dp"
+            app:bt_title="@string/favorite"
+            app:bt_shape="@drawable/edittext"
+            app:bt_padding="5dp"
+            app:bt_titlePadding="0dp" />
+
+        <com.gauravk.bubblenavigation.BubbleToggleView
+            android:id="@+id/c_item_rest"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            app:bt_active="false"
+            android:fontFamily="serif"
+            app:bt_badgeTextSize="9sp"
+            app:bt_colorActive="@color/colorLinks1"
+            app:bt_colorInactive="@color/colorPrimary"
+            app:bt_icon="@drawable/ic_view_module_black_24dp"
+            app:bt_shape="@drawable/edittext"
+            app:bt_padding="4dp"
+            app:bt_title="@string/ct"
+            app:bt_titlePadding="-1dp" />
+
+        <!-- Add more child items here - max upto 5 -->
+
+    </com.gauravk.bubblenavigation.BubbleNavigationLinearView>
+
+</RelativeLayout>

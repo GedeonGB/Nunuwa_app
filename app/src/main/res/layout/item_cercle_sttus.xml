@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="65dp"
+    android:layout_height="85dp"
+    android:layout_margin="4dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="60dp"
+        android:id="@+id/cirImgSttus"
+        android:src="@drawable/img1"
+        app:civ_border_overlay="true"
+        android:scaleType="centerCrop"
+        android:layout_margin="3dp"
+        app:civ_border_width="1dp"
+        app:civ_border_color="@color/colorLinks"
+        android:layout_height="60dp" />
+
+    <TextView
+        android:text="Kecth"
+        android:layout_below="@+id/cirImgSttus"
+        android:textStyle="normal"
+        android:textColor="@color/colorPrimary"
+        android:id="@+id/txt_sttus"
+        android:fontFamily="serif"
+        android:textSize="12sp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:paddingEnd="3dp"
+        android:paddingStart="3dp"
+        android:paddingBottom="1dp"
+        android:textSize="13sp"
+        android:layout_marginEnd="3dp"
+        android:textColor="@color/colorAccent"
+        android:text="22"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/cerclebackgroundpink"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>

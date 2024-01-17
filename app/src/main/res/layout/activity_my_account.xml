@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".my_account">
+    <include
+        android:id="@+id/lyout_top"
+        android:layout_alignParentTop="true"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        layout="@layout/lyout_top" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_below="@+id/lyout_top"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginBottom="50dp"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/picRel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/imgUser"
+                    android:layout_alignParentTop="true"
+                    android:backgroundTint="#d9d9d9"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/ic_person_outline_black_24dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/img4"
+                    android:layout_width="match_parent"
+                    android:layout_height="380dp" />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_marginBottom="6dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_height="wrap_content">
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginBottom="1dp"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:srcCompat="@drawable/ic_camera_alt_black_24dp"
+                    android:elevation="6dp"
+                    android:id="@+id/fb_camera"
+                    android:onClick="ToCamera"
+                    android:layout_marginTop="2dp"
+                    android:visibility="visible"
+                    app:pressedTranslationZ="12dp"
+                    android:backgroundTint="#107900"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    tools:targetApi="lollipop"
+                    tools:ignore="VectorDrawableCompat" />
+
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_toStartOf="@+id/fb_camera"
+                    android:layout_marginBottom="26dp"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:srcCompat="@drawable/ic_photo_library_black_24dp"
+                    android:elevation="4dp"
+                    android:id="@+id/fb_gallery"
+                    android:onClick="ToGallery"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginTop="2dp"
+                    android:visibility="visible"
+                    android:backgroundTint="#107900"
+                    android:layout_height="wrap_content"
+                    tools:targetApi="lollipop"
+                    tools:ignore="VectorDrawableCompat" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_below="@+id/picRel"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="8dp"
+                app:cardElevation="6dp"
+                android:textStyle="bold"
+                android:id="@+id/RelDetDEsc"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="-26dp"
+                android:elevation="18dp"
+                tools:targetApi="lollipop">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:background="#ffffff"
+                        android:id="@+id/linName"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="16dp"
+                        android:orientation="vertical"
+                        android:padding="6dp"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:text="Gedeon Beni"
+                            android:layout_width="wrap_content"
+                            android:textSize="32sp"
+                            android:textStyle="bold"
+                            android:textColor="#111"
+                            android:fontFamily="sans-serif-thin"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:text="Location : Goma"
+                            android:textColor="#111"
+                            android:layout_width="wrap_content"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:fontFamily="sans-serif-thin"
+                            android:layout_height="wrap_content" />
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+
+                            <TextView
+                                android:text="Phone : +24399 987 9870"
+                                android:layout_width="wrap_content"
+                                android:textSize="15sp"
+                                android:textColor="#111"
+                                android:textStyle="bold"
+                                android:fontFamily="sans-serif-thin"
+                                android:layout_height="wrap_content" />
+                            <!--<ImageView-->
+                            <!--android:src="@drawable/ic_mode_edit_black_24dp"-->
+                            <!--android:padding="3dp"-->
+                            <!--android:layout_marginStart="6dp"-->
+                            <!--android:background="@drawable/cerclebackgroundpurple"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content" />-->
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="120dp"
+                        android:layout_below="@+id/linName"
+                        android:background="@color/colorPrimary"
+                        android:layout_height="match_parent">
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_marginTop="26dp"
+                        android:id="@+id/linDesc"
+                        android:layout_width="match_parent"
+                        android:layout_below="@+id/linName"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:text="Other details"
+                            android:textSize="14sp"
+                            android:background="@drawable/cerclebackgroundpurple"
+                            android:id="@+id/txtDesc"
+                            android:layout_marginTop="4dp"
+                            android:textColor="@color/colorPrimary"
+                            android:textStyle="bold"
+                            android:paddingStart="6dp"
+                            android:paddingEnd="3dp"
+                            android:paddingBottom="3dp"
+                            android:fontFamily="sans-serif-thin"
+                            android:layout_marginStart="7dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+
+                        <TextView
+                            android:text="some long text"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="12dp"
+                            android:layout_marginBottom="16dp"
+                            android:textColor="@color/colorAccent"
+                            android:padding="6dp"
+                            android:fontFamily="sans-serif-light"
+                            android:layout_marginStart="5dp"
+                            android:layout_below="@+id/txtDesc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+
+
+            </androidx.cardview.widget.CardView>
+
+            <RelativeLayout
+                android:layout_below="@+id/RelDetDEsc"
+                android:layout_width="match_parent"
+                android:id="@+id/RelMyREquest"
+                android:layout_marginTop="6dp"
+                android:background="@color/colorAccent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="My Requests"
+                    android:textColor="#111"
+                    android:textSize="18sp"
+                    android:layout_marginTop="26dp"
+                    android:fontFamily="sans-serif-thin"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/txtTrending"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerRequests"
+                    android:layout_marginTop="26dp"
+                    android:layout_marginStart="10dp"
+                    android:scrollbarStyle="insideInset"
+                    android:scrollbars="horizontal"
+                    android:scrollbarThumbHorizontal="@color/colorPrimary"
+                    android:scrollbarFadeDuration="50000"
+                    android:scrollbarSize="2dp"
+                    android:background="#1dffffff"
+                    android:layout_below="@+id/txtTrending"
+                    android:scrollIndicators="bottom"
+                    android:layout_width="wrap_content"
+                    android:layout_marginBottom="14dp"
+                    android:layout_height="225dp"
+                    tools:targetApi="m" />
+
+
+
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_below="@+id/RelMyREquest"
+                android:layout_width="match_parent"
+                android:layout_marginTop="6dp"
+                android:id="@+id/RelMyPurch"
+                android:background="@color/colorAccent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="My Purchase"
+                    android:textColor="#111"
+                    android:textSize="18sp"
+                    android:layout_marginTop="26dp"
+                    android:fontFamily="sans-serif-thin"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/txtPurchase"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerPurchase"
+                    android:layout_marginTop="26dp"
+                    android:scrollbarStyle="insideInset"
+                    android:scrollbars="horizontal"
+                    android:scrollbarThumbHorizontal="@color/colorPrimary"
+                    android:scrollbarFadeDuration="50000"
+                    android:scrollbarSize="2dp"
+                    android:background="#1dffffff"
+                    android:layout_below="@+id/txtPurchase"
+                    android:scrollIndicators="bottom"
+                    android:layout_width="wrap_content"
+                    android:layout_marginBottom="14dp"
+                    android:layout_height="225dp"
+                    tools:targetApi="m" />
+
+
+
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+<!--    <include-->
+<!--        android:id="@+id/lyout_bottom"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:visibility="gone"-->
+<!--        android:layout_width="match_parent"-->
+<!--        layout="@layout/lyout_drwer" />-->
+
+    <com.gauravk.bubblenavigation.BubbleNavigationLinearView
+        android:id="@+id/bot_navigation_Lin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimaryGry"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:elevation="4dp"
+        android:padding="6dp"
+        android:weightSum="5"
+        tools:targetApi="lollipop">
+
+        <TextView
+            android:id="@+id/textBUbble"
+            android:background="@drawable/edittext"
+            android:padding="4dp"
+            android:text=" here is it "
+            android:textStyle="normal"
+            android:fontFamily="serif"
+            android:visibility="gone"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <com.gauravk.bubblenavigation.BubbleToggleView
+            android:id="@+id/c_myccout"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            app:bt_active="true"
+            android:fontFamily="serif"
+            android:layout_gravity="start"
+            app:bt_badgeTextSize="10sp"
+            android:gravity="start"
+            app:bt_colorInactive="@color/colorPrimary"
+            app:bt_icon="@drawable/ic_person_outline_black_24dp"
+            app:bt_shape="@drawable/edittext"
+            app:bt_padding="5dp"
+            app:bt_title="@string/account"
+            app:bt_colorActive="@color/colorLinks2"
+            app:bt_titlePadding="0dp" />
+
+
+        <com.gauravk.bubblenavigation.BubbleToggleView
+            android:id="@+id/myorders"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            app:bt_badgeTextSize="11sp"
+            app:bt_active="false"
+            app:bt_colorActive="@color/colorLinks3"
+            app:bt_titlePadding="0dp"
+            android:fontFamily="serif"
+            app:bt_shape="@drawable/edittext"
+            app:bt_padding="5dp"
+            app:bt_colorInactive="@color/colorPrimary"
+            app:bt_icon="@drawable/ic_next_week_black_24dp"
+            app:bt_title="@string/orders" />
+
+        <com.gauravk.bubblenavigation.BubbleToggleView
+            android:id="@+id/myhome"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:fontFamily="serif"
+            android:layout_height="wrap_content"
+            app:bt_badgeTextSize="10sp"
+            app:bt_active="false"
+            app:bt_colorInactive="@color/colorPrimary"
+            app:bt_icon="@drawable/ic_home_black_24dp"
+            app:bt_shape="@drawable/edittext"
+            app:bt_padding="5dp"
+            app:bt_title="@string/Home"
+            app:bt_colorActive="@color/colorLinks"
+            app:bt_titlePadding="0dp"  />
+
+        <com.gauravk.bubblenavigation.BubbleToggleView
+            android:id="@+id/myct"
+            android:layout_width="0dp"
+            app:bt_badgeTextSize="8sp"
+            android:layout_weight="0"
+            android:layout_height="wrap_content"
+            app:bt_active="false"
+            android:visibility="gone"
+            app:bt_colorActive="@color/colorLinks1"
+            app:bt_colorInactive="@color/colorPrimary"
+            app:bt_icon="@drawable/ic_favorite_black_24dp"
+            app:bt_title="@string/favorite"
+            app:bt_shape="@drawable/edittext"
+            app:bt_padding="5dp"
+            app:bt_titlePadding="0dp" />
+
+        <com.gauravk.bubblenavigation.BubbleToggleView
+            android:id="@+id/c_item_rest"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            app:bt_active="false"
+            android:fontFamily="serif"
+            app:bt_badgeTextSize="9sp"
+            app:bt_colorActive="@color/colorLinks1"
+            app:bt_colorInactive="@color/colorPrimary"
+            app:bt_icon="@drawable/ic_view_module_black_24dp"
+            app:bt_shape="@drawable/edittext"
+            app:bt_padding="4dp"
+            app:bt_title="@string/ct"
+            app:bt_titlePadding="-1dp" />
+
+        <com.gauravk.bubblenavigation.BubbleToggleView
+            android:id="@+id/c_search"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            app:bt_active="false"
+            android:fontFamily="serif"
+            app:bt_badgeTextSize="9sp"
+            app:bt_colorActive="@color/colorLinks5"
+            app:bt_colorInactive="@color/colorPrimary"
+            app:bt_icon="@drawable/ic_search_black_24dp"
+            app:bt_shape="@drawable/edittext"
+            app:bt_padding="4dp"
+            app:bt_title="@string/ct"
+            app:bt_titlePadding="-1dp" />
+
+        <!-- Add more child items here - max upto 5 -->
+
+    </com.gauravk.bubblenavigation.BubbleNavigationLinearView>
+
+</RelativeLayout>

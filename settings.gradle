@@ -1,0 +1,2 @@
+rootProject.name='Nunuwa_app'
+include ':app'

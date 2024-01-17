@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/toSignUp" android:title="Sign Up" />
+    <item android:id="@+id/toSignIn" android:title="Sign In" />
+    <item android:id="@+id/contct" android:title="Contact Us" />
+    <item android:id="@+id/lngue" android:title="Language" />
+</menu>

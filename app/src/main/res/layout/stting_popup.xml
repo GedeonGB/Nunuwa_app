@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_centerHorizontal="true"
+    android:padding="6dp"
+    android:layout_gravity="center_horizontal"
+    android:gravity="center_horizontal"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:text="@string/veillez_choisir_votre_langue"
+        android:layout_width="wrap_content"
+        android:id="@+id/topText"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="16sp"
+        android:layout_centerHorizontal="true"
+        android:textStyle="normal"
+        android:fontFamily="sans-serif-thin"
+        android:layout_alignParentTop="true"
+        android:layout_height="wrap_content"/>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/topText"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="6dp"
+            android:id="@+id/relSw"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text=" S "
+                android:textColor="@color/colorLinks"
+                android:textSize="46sp"
+                android:padding="2dp"
+                android:background="@drawable/cerclebackgroundpurple"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:text="Swahili"
+                android:layout_width="wrap_content"
+                android:textSize="15sp"
+                android:gravity="center_horizontal"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="sans-serif"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="6dp"
+            android:layout_toEndOf="@+id/relSw"
+            android:id="@+id/relFr"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text=" F "
+                android:textColor="@color/colorLinks"
+                android:textSize="46sp"
+                android:id="@+id/chooseFR"
+                android:padding="2dp"
+                android:background="@drawable/cerclebackgroundpurple"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:text="@string/francais"
+                android:layout_width="wrap_content"
+                android:textSize="15sp"
+                android:gravity="center_horizontal"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="sans-serif"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@+id/relSw"
+            android:layout_margin="6dp"
+            android:id="@+id/relEng"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text=" E "
+                android:textColor="@color/colorLinks"
+                android:textSize="46sp"
+                android:padding="2dp"
+                android:background="@drawable/cerclebackgroundpurple"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:text="English"
+                android:layout_width="wrap_content"
+                android:textSize="15sp"
+                android:gravity="center_horizontal"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="sans-serif"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@+id/relFr"
+            android:layout_toEndOf="@+id/relEng"
+            android:layout_margin="6dp"
+            android:id="@+id/relClose"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text=" X "
+                android:textColor="@color/colorPrimary"
+                android:textSize="46sp"
+                android:padding="2dp"
+                android:background="@drawable/cerclebackgroundpurple"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:text="Fermer"
+                android:layout_width="wrap_content"
+                android:textSize="15sp"
+                android:gravity="center_horizontal"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="sans-serif"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

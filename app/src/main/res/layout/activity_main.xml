@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/colorPrimaryGry"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+   <include
+       android:id="@+id/lyout_top"
+       android:layout_alignParentTop="true"
+       android:layout_height="wrap_content"
+       android:layout_width="match_parent"
+       layout="@layout/lyout_top" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_below="@+id/lyout_top"
+        android:id="@+id/nestScroll"
+        android:layout_marginTop="2dp"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_marginStart="6dp"
+            android:layout_marginBottom="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/rel_Sttus"
+        android:layout_marginTop="6dp"
+        android:background="@color/colorAccent"
+        android:padding="4dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:fontFamily="serif"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_width="wrap_content"
+            android:id="@+id/textTod"
+            android:editable="false"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:text="Today's deal"
+            android:layout_height="wrap_content" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="wrap_content"
+            android:scrollbarSize="2dp"
+            android:layout_below="@+id/textTod"
+            android:layout_marginStart="1dp"
+            android:scrollbars="horizontal"
+            android:id="@+id/relSttus"
+            android:layout_height="90dp"/>
+    </RelativeLayout>
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:id="@+id/rel_Ct"
+                android:layout_marginTop="12dp"
+                android:padding="6dp"
+                android:background="@color/colorAccent"
+                android:layout_below="@+id/rel_Sttus"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:fontFamily="serif"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/textCt"
+                    android:textSize="19sp"
+                    android:textStyle="bold"
+                    android:text="Categories"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:fontFamily="serif"
+                    android:textColor="@color/colorLinks"
+                    android:layout_width="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="12dp"
+                    android:onClick="toCt"
+                    android:padding="4dp"
+                    android:id="@+id/textCtmore"
+                    android:textSize="14sp"
+                    android:textStyle="normal"
+                    android:text="more"
+                    android:layout_height="wrap_content" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="wrap_content"
+                    android:scrollbarSize="2dp"
+                    android:layout_below="@+id/textCt"
+                    android:layout_marginStart="1dp"
+                    android:scrollbarFadeDuration="10000"
+                    android:scrollbars="horizontal"
+                    android:id="@+id/rec_Ct"
+                    android:layout_height="180dp"/>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_below="@+id/rel_Ct"
+                android:id="@+id/rel_most_sold"
+                android:layout_height="wrap_content">
+
+                <com.gtomato.android.ui.widget.CarouselView
+                    android:id="@+id/carousel"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:visibility="gone"
+                    android:layout_centerInParent="true"/>
+
+                <com.synnapps.carouselview.CarouselView
+                    android:id="@+id/carouselView"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    app:fillColor="#FFFFFFFF"
+                    app:autoPlay="true"
+                    app:pageColor="#00000000"
+                    app:radius="3dp"
+                    app:slideInterval="3000"
+                    app:strokeColor="#FF777777"
+                    app:strokeWidth="1dp"/>
+
+            </RelativeLayout>
+
+
+
+            <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/rel_Item"
+        android:layout_below="@+id/rel_most_sold"
+                android:layout_marginTop="16dp"
+                android:background="@color/colorAccent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:fontFamily="serif"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_width="wrap_content"
+            android:id="@+id/textItems"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            android:text="Trending Items"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:fontFamily="serif"
+            android:textColor="@color/colorLinks"
+            android:onClick="toItemS"
+            android:layout_width="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="12dp"
+            android:padding="4dp"
+            android:id="@+id/textItemmore"
+            android:textSize="14sp"
+            android:textStyle="normal"
+            android:text="more"
+            android:layout_height="wrap_content" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="12dp"
+            android:scrollbarSize="2dp"
+            android:layout_below="@+id/textItems"
+            android:layout_marginStart="6dp"
+            android:scrollbars="vertical"
+            android:id="@+id/rec_Item"
+            android:layout_height="wrap_content"/>
+
+
+    </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:id="@+id/rel_Recom"
+                android:padding="6dp"
+                android:layout_marginTop="22dp"
+                android:background="@color/colorAccent"
+                android:layout_below="@+id/rel_Item"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:fontFamily="serif"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/textRecom"
+                    android:textSize="19sp"
+                    android:textStyle="bold"
+                    android:text="Recommend"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:fontFamily="serif"
+                    android:textColor="@color/colorLinks"
+                    android:layout_width="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="12dp"
+                    android:padding="4dp"
+                    android:id="@+id/textREcommore"
+                    android:textSize="14sp"
+                    android:textStyle="normal"
+                    android:text="more"
+                    android:layout_height="wrap_content" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="wrap_content"
+                    android:scrollbarSize="2dp"
+                    android:layout_below="@+id/textRecom"
+                    android:scrollbarFadeDuration="10000"
+                    android:layout_marginStart="1dp"
+                    android:scrollbars="horizontal"
+                    android:id="@+id/rec_Recom"
+                    android:layout_height="245dp"/>
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:id="@+id/rel_other_Item"
+                android:layout_marginTop="26dp"
+                android:background="@color/colorAccent"
+                android:layout_below="@+id/rel_Recom"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:fontFamily="serif"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/textOtherItems"
+                    android:textSize="19sp"
+                    android:textStyle="bold"
+                    android:text="Other Items"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:fontFamily="serif"
+                    android:textColor="@color/colorLinks"
+                    android:layout_width="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="12dp"
+                    android:padding="4dp"
+                    android:id="@+id/textOthermore"
+                    android:textSize="14sp"
+                    android:textStyle="normal"
+                    android:text="more"
+                    android:layout_height="wrap_content" />
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginTop="12dp"
+                    android:scrollbarSize="2dp"
+                    android:layout_below="@+id/textOtherItems"
+                    android:layout_marginStart="6dp"
+                    android:scrollbars="vertical"
+                    android:id="@+id/rec_Other_Item"
+                    android:layout_height="wrap_content"/>
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.gauravk.bubblenavigation.BubbleNavigationLinearView
+        android:id="@+id/bot_navigation_Lin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimaryGry"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:elevation="4dp"
+        android:padding="6dp"
+        android:weightSum="5"
+        tools:targetApi="lollipop">
+
+        <TextView
+            android:id="@+id/textBUbble"
+            android:background="@drawable/edittext"
+            android:padding="4dp"
+            android:text=" here is it "
+            android:textStyle="normal"
+            android:fontFamily="serif"
+            android:visibility="gone"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <com.gauravk.bubblenavigation.BubbleToggleView
+            android:id="@+id/c_myccout"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            app:bt_active="false"
+            android:fontFamily="serif"
+            android:layout_gravity="start"
+            app:bt_badgeTextSize="10sp"
+            android:gravity="start"
+            app:bt_colorInactive="@color/colorPrimary"
+            app:bt_icon="@drawable/ic_person_outline_black_24dp"
+            app:bt_shape="@drawable/edittext"
+            app:bt_padding="5dp"
+            app:bt_title="@string/account"
+            app:bt_colorActive="@color/colorLinks2"
+            app:bt_titlePadding="0dp" />
+
+
+        <com.gauravk.bubblenavigation.BubbleToggleView
+            android:id="@+id/myorders"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            app:bt_badgeTextSize="11sp"
+            app:bt_active="false"
+            app:bt_colorActive="@color/colorLinks3"
+            app:bt_titlePadding="0dp"
+            android:fontFamily="serif"
+            app:bt_shape="@drawable/edittext"
+            app:bt_padding="5dp"
+            app:bt_colorInactive="@color/colorPrimary"
+            app:bt_icon="@drawable/ic_next_week_black_24dp"
+            app:bt_title="@string/orders" />
+
+        <com.gauravk.bubblenavigation.BubbleToggleView
+            android:id="@+id/myhome"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:fontFamily="serif"
+            android:layout_height="wrap_content"
+            app:bt_badgeTextSize="10sp"
+            app:bt_active="true"
+            app:bt_colorInactive="@color/colorPrimary"
+            app:bt_icon="@drawable/ic_home_black_24dp"
+            app:bt_shape="@drawable/edittext"
+            app:bt_padding="5dp"
+            app:bt_title="@string/Home"
+            app:bt_colorActive="@color/colorLinks"
+            app:bt_titlePadding="0dp"  />
+
+        <com.gauravk.bubblenavigation.BubbleToggleView
+            android:id="@+id/myct"
+            android:layout_width="0dp"
+            app:bt_badgeTextSize="8sp"
+            android:layout_weight="0"
+            android:layout_height="wrap_content"
+            app:bt_active="false"
+            android:visibility="gone"
+            app:bt_colorActive="@color/colorLinks1"
+            app:bt_colorInactive="@color/colorPrimary"
+            app:bt_icon="@drawable/ic_favorite_black_24dp"
+            app:bt_title="@string/favorite"
+            app:bt_shape="@drawable/edittext"
+            app:bt_padding="5dp"
+            app:bt_titlePadding="0dp" />
+
+        <com.gauravk.bubblenavigation.BubbleToggleView
+            android:id="@+id/c_item_rest"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            app:bt_active="false"
+            android:fontFamily="serif"
+            app:bt_badgeTextSize="9sp"
+            app:bt_colorActive="@color/colorLinks1"
+            app:bt_colorInactive="@color/colorPrimary"
+            app:bt_icon="@drawable/ic_view_module_black_24dp"
+            app:bt_shape="@drawable/edittext"
+            app:bt_padding="4dp"
+            app:bt_title="@string/ct"
+            app:bt_titlePadding="-1dp" />
+
+        <com.gauravk.bubblenavigation.BubbleToggleView
+            android:id="@+id/c_search"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            app:bt_active="false"
+            android:fontFamily="serif"
+            app:bt_badgeTextSize="9sp"
+            app:bt_colorActive="@color/colorLinks5"
+            app:bt_colorInactive="@color/colorPrimary"
+            app:bt_icon="@drawable/ic_search_black_24dp"
+            app:bt_shape="@drawable/edittext"
+            app:bt_padding="4dp"
+            app:bt_title="@string/ct"
+            app:bt_titlePadding="-1dp" />
+
+        <!-- Add more child items here - max upto 5 -->
+
+    </com.gauravk.bubblenavigation.BubbleNavigationLinearView>
+
+<!--    <include-->
+<!--        android:id="@+id/lyout_bottom"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_width="match_parent"-->
+<!--        layout="@layout/lyout_drwer" />-->
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#6A6A6A"
+        android:layout_alignParentBottom="true"
+        android:scrollbarAlwaysDrawHorizontalTrack="false"
+        app:itemIconTint="@drawable/selector"
+        android:visibility="gone"
+        app:elevation="3dp"
+        app:itemTextColor="@drawable/selector"
+        app:menu="@menu/navigation1" />
+
+</RelativeLayout>

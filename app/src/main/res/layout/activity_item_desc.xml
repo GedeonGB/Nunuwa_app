@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".item_desc">
+    <include
+        android:id="@+id/lyout_top"
+        android:layout_alignParentTop="true"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        layout="@layout/lyout_top" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_below="@+id/lyout_top"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginBottom="50dp"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/picRel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/imgUser"
+                    android:layout_alignParentTop="true"
+                    android:backgroundTint="#d9d9d9"
+                    android:visibility="gone"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/ic_person_outline_black_24dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/im2"
+                    android:layout_width="match_parent"
+                    android:layout_height="380dp" />
+
+                <com.synnapps.carouselview.CarouselView
+                    android:id="@+id/carouselView"
+                    android:layout_width="match_parent"
+                    android:layout_height="350dp"
+                    app:fillColor="#FFFFFFFF"
+                    app:autoPlay="true"
+                    app:pageColor="#00000000"
+                    app:radius="3dp"
+                    app:slideInterval="3000"
+                    app:strokeColor="#FF777777"
+                    app:strokeWidth="1dp"/>
+
+
+            </RelativeLayout>
+
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_marginTop="6dp"
+                android:layout_marginStart="12dp"
+                android:layout_below="@id/picRel"
+                android:id="@+id/linDEsc1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:text="Item: Electronics"
+                    android:gravity="bottom"
+                    android:padding="4dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:fontFamily="serif"
+                    android:id="@+id/txt_item_title"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:text="Price: 430$"
+                    android:gravity="bottom"
+                    android:padding="4dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:fontFamily="serif"
+                    android:id="@+id/txt_item_price"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:textColor="@color/colorAccent"
+                    android:text="  Buy  "
+                    android:background="@color/colorPrimary"
+                    android:id="@+id/txt_detils"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginBottom="6dp"
+                    android:padding="6dp"
+                    android:layout_marginTop="-38dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:backgroundTint="#616161"
+                android:layout_below="@+id/linDEsc1"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="8dp"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:id="@+id/RelDetDEsc"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="6dp"
+                android:elevation="18dp"
+                tools:targetApi="lollipop">
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_marginTop="2dp"
+                    android:id="@+id/linDesc"
+                    android:layout_width="match_parent"
+                    android:layout_below="@+id/linName"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="Description"
+                        android:textSize="14sp"
+                        android:background="@drawable/cerclerectngle"
+                        android:id="@+id/txtDesc"
+                        android:layout_marginTop="4dp"
+                        android:textColor="@color/colorPrimary"
+                        android:textStyle="bold"
+                        android:paddingStart="6dp"
+                        android:paddingEnd="6dp"
+                        android:paddingBottom="3dp"
+                        android:fontFamily="serif"
+                        android:layout_marginStart="7dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+
+                    <TextView
+                        android:text="some long text"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginEnd="12dp"
+                        android:layout_marginBottom="16dp"
+                        android:padding="6dp"
+                        android:fontFamily="serif"
+                        android:layout_marginStart="5dp"
+                        android:layout_below="@+id/txtDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_below="@+id/RelDetDEsc"
+                android:layout_width="match_parent"
+                android:id="@+id/RelMyREquest"
+                android:layout_marginTop="6dp"
+                android:background="@color/colorAccent"
+                android:padding="4dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="Related Items"
+                    android:textColor="#111"
+                    android:textSize="18sp"
+                    android:layout_marginTop="26dp"
+                    android:fontFamily="serif"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/txtTrending"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerRel"
+                    android:layout_marginTop="26dp"
+                    android:layout_marginStart="10dp"
+                    android:scrollbarStyle="insideInset"
+                    android:scrollbars="horizontal"
+                    android:scrollbarThumbHorizontal="@color/colorPrimary"
+                    android:scrollbarFadeDuration="50000"
+                    android:scrollbarSize="2dp"
+                    android:background="#1dffffff"
+                    android:layout_below="@+id/txtTrending"
+                    android:scrollIndicators="bottom"
+                    android:layout_width="wrap_content"
+                    android:layout_marginBottom="14dp"
+                    android:layout_height="245dp"
+                    tools:targetApi="m" />
+
+
+
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_below="@+id/RelMyREquest"
+                android:layout_width="match_parent"
+                android:layout_marginTop="6dp"
+                android:id="@+id/RelMyPurch"
+                android:background="@color/colorAccent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="Recent items"
+                    android:textColor="#111"
+                    android:textSize="18sp"
+                    android:layout_marginTop="26dp"
+                    android:fontFamily="serif"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/txtPurchase"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerRec"
+                    android:layout_marginTop="26dp"
+                    android:scrollbarStyle="insideInset"
+                    android:scrollbars="horizontal"
+                    android:scrollbarThumbHorizontal="@color/colorPrimary"
+                    android:scrollbarFadeDuration="50000"
+                    android:scrollbarSize="2dp"
+                    android:background="#1dffffff"
+                    android:layout_below="@+id/txtPurchase"
+                    android:scrollIndicators="bottom"
+                    android:layout_width="wrap_content"
+                    android:layout_marginBottom="14dp"
+                    android:layout_height="245dp"
+                    tools:targetApi="m" />
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+    <include
+        android:id="@+id/lyout_bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        layout="@layout/lyout_drwer" />
+
+</RelativeLayout>

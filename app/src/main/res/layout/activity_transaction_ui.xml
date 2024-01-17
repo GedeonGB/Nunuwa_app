@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".transaction_ui">
+
+    <include
+        android:id="@+id/lyout_top"
+        android:layout_alignParentTop="true"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        layout="@layout/lyout_top" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_below="@+id/lyout_top"
+        android:scrollbars="vertical"
+        android:scrollbarStyle="outsideOverlay"
+        android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="#fff"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:id="@+id/linearTop"
+            android:layout_marginStart="16dp"
+            android:weightSum="3"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal"
+            android:background="@color/colorAccent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Delivery"
+                android:textSize="15sp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:fontFamily="serif"
+                android:textColor="@color/colorLinks"
+                android:background="@drawable/rounded_rect"
+                android:paddingEnd="8dp"
+                android:paddingTop="2dp"
+                android:paddingBottom="4dp"
+                android:paddingStart="8dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:text="Payement"
+                android:textSize="15sp"
+                android:paddingTop="2dp"
+                android:paddingBottom="4dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:fontFamily="serif"
+                android:background="@drawable/rounded_rect"
+                android:paddingEnd="8dp"
+                android:paddingStart="8dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:text="Summary"
+                android:textSize="15sp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:gravity="center"
+                android:paddingTop="2dp"
+                android:paddingBottom="4dp"
+                android:layout_weight="1"
+                android:fontFamily="serif"
+                android:background="@drawable/rounded_rect"
+                android:paddingEnd="8dp"
+                android:paddingStart="8dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/linearDet"
+            android:layout_below="@+id/linearTop"
+            android:background="@color/colorAccent"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="12sp"
+                android:layout_marginStart="1dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+
+                    android:text="Destination : "
+                    android:layout_width="wrap_content"
+                    android:layout_margin="3dp"
+                    android:textSize="16sp"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+
+                    android:text="DRC | Bukavu "
+                    android:layout_width="wrap_content"
+                    android:layout_margin="3dp"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_height="wrap_content" />
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_margin="12dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:layout_height="1dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="1sp"
+                    android:layout_marginStart="1dp"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+
+                        android:text="Select mode of delivery :"
+                        android:layout_width="wrap_content"
+                        android:layout_margin="3dp"
+                        android:textSize="16sp"
+                        android:textColor="#111"
+                        android:layout_height="wrap_content" />
+
+                    <RadioGroup
+                        android:layout_margin="4dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <RadioButton
+                            android:text="in 3days "
+                            android:textColor="#111"
+                            android:layout_width="wrap_content"
+                            android:checked="true"
+                            android:layout_height="wrap_content" />
+
+                        <RadioButton
+                            android:text="in 7days "
+                            android:textColor="#111"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </RadioGroup>
+
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_margin="12dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:layout_height="1dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="1sp"
+                    android:orientation="vertical"
+                    android:layout_marginStart="1dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+
+                        android:text="Home Delivery : "
+                        android:layout_width="wrap_content"
+                        android:layout_margin="3dp"
+                        android:textSize="16sp"
+                        android:textColor="#111"
+                        android:layout_height="wrap_content" />
+
+                    <CheckBox
+                        android:text="Yes"
+                        android:textColor="#111"
+                        android:layout_marginStart="6dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <CheckBox
+                        android:text="No"
+                        android:layout_marginStart="6dp"
+                        android:layout_marginTop="4dp"
+                        android:textColor="#111"
+                        android:checked="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_margin="12dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:layout_height="1dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginTop="1dp"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+
+                        android:text="Mode of payement :"
+                        android:layout_width="wrap_content"
+                        android:layout_margin="3dp"
+                        android:textSize="16sp"
+                        android:textColor="#111"
+                        android:layout_height="wrap_content" />
+
+
+
+                    <RadioGroup
+                        android:layout_margin="4dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <RadioButton
+                            android:text="Cash "
+                            android:textColor="#111"
+                            android:layout_width="wrap_content"
+                            android:checked="true"
+                            android:layout_height="wrap_content" />
+
+                        <RadioButton
+                            android:text="E-Money "
+                            android:textColor="#111"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </RadioGroup>
+
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_margin="12dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:layout_height="1dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginTop="1dp"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+
+                        android:text="Total :"
+                        android:layout_width="wrap_content"
+                        android:layout_margin="3dp"
+                        android:textSize="19sp"
+                        android:textColor="#111"
+                        android:layout_height="wrap_content" />
+
+
+                    <TextView
+                        android:textSize="54sp"
+                        android:text="17.99$"
+                        android:gravity="center_horizontal"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginStart="16dp"
+                        android:fontFamily="sans-serif-thin"
+                        android:textColor="#111"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+
+
+            <Button
+                android:text="Buy now "
+                android:layout_below="@+id/linearLayout1"
+                android:textAllCaps="false"
+                android:layout_marginTop="26dp"
+                android:fontFamily="sans-serif-light"
+                android:id="@+id/btnBuy"
+                android:padding="6dp"
+                android:layout_marginBottom="12dp"
+                android:layout_marginStart="4dp"
+                android:elevation="10dp"
+                android:layout_marginEnd="4dp"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/colorPrimaryDark"
+                android:background="@drawable/cerclerectngle"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                tools:targetApi="lollipop" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:paddingBottom="16dp"
+                android:background="@color/colorAccent"
+                android:layout_marginRight="12dp"
+                android:layout_marginLeft="12dp"
+
+                android:layout_marginTop="32sp"
+                android:layout_height="wrap_content">
+
+
+                <CheckBox
+                    android:text="Terms &amp; condition"
+                    android:textColor="#111"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+
+                    android:text="some long text"
+                    android:layout_width="wrap_content"
+                    android:layout_margin="3dp"
+                    android:textSize="16sp"
+                    android:textColor="#111"
+                    android:layout_height="wrap_content" />
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+    </ScrollView>
+
+</RelativeLayout>

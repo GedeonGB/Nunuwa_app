@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ItemsList">
+
+    <include
+        android:id="@+id/lyout_top"
+        android:layout_alignParentTop="true"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        layout="@layout/lyout_top" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/rel_Item"
+        android:layout_below="@+id/lyout_top"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:fontFamily="serif"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_marginStart="6dp"
+            android:layout_width="wrap_content"
+            android:id="@+id/title_textItems"
+            android:layout_marginTop="12dp"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:text="Items"
+            android:layout_height="wrap_content" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_marginEnd="4dp"
+            android:layout_marginTop="6dp"
+            android:scrollbarSize="2dp"
+            android:layout_below="@+id/title_textItems"
+            android:scrollbarFadeDuration="3000"
+            android:layout_marginStart="6dp"
+            android:scrollbars="vertical"
+            android:layout_marginBottom="50dp"
+            android:id="@+id/rec_Item"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/lyout_bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        layout="@layout/lyout_drwer" />
+
+</RelativeLayout>

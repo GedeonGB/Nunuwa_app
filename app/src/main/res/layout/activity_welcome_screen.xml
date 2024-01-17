@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".welcomeScreen">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:id="@+id/reltop2"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="16dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="160dp"
+            android:scaleType="centerCrop"
+            android:layout_margin="6dp"
+            android:src="@drawable/kikpoooo"
+            android:id="@+id/imgtop1"
+            android:layout_height="250dp" />
+        <ImageView
+            android:id="@+id/imgtop2"
+            android:layout_toEndOf="@+id/imgtop1"
+            android:scaleType="centerCrop"
+            android:layout_width="160dp"
+            android:layout_margin="6dp"
+            android:src="@drawable/kikpoooo2"
+            android:layout_height="250dp" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:id="@+id/relbttom1"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="16dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="160dp"
+            android:layout_margin="6dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/kikpoooo3"
+            android:id="@+id/imgbop1"
+            android:layout_height="250dp" />
+        <ImageView
+            android:id="@+id/imgbop2"
+            android:layout_toEndOf="@+id/imgbop1"
+            android:scaleType="centerCrop"
+            android:layout_width="160dp"
+            android:layout_margin="6dp"
+            android:src="@drawable/kikpoooo4"
+            android:layout_height="250dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="#76FAFAFA"
+        android:layout_centerInParent="true"
+        android:id="@+id/reltop1"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/nunuw_text_id"
+            android:layout_centerInParent="true"
+            android:textSize="78sp"
+            android:textColor="@color/colorPrimaryDark"
+            android:fontFamily="serif"
+            android:textStyle="italic"
+            android:layout_height="wrap_content"
+            android:text="Uwabey" />
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

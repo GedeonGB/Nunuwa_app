@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="0dp"
+    app:cardElevation="8dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="2dp"
+        android:layout_gravity="start"
+        android:gravity="start"
+        android:id="@+id/relTop"
+        android:padding="2dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:src="@drawable/uwbe"
+            android:layout_alignParentStart="true"
+            android:layout_width="120dp"
+            android:visibility="visible"
+            android:layout_height="35dp"/>
+
+
+        <TextView
+            android:layout_marginStart="6dp"
+            android:visibility="gone"
+            android:text="Uwabey"
+            android:textStyle="italic"
+            android:fontFamily="serif"
+            android:textSize="16sp"
+            android:textColor="@color/colorPrimaryDark"
+            android:textAlignment="textStart"
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+
+        <ImageView
+            android:id="@+id/dot_menu"
+            android:src="@drawable/ic_more_vert_black_24dp"
+            android:layout_width="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:onClick="toMenu"
+            android:padding="3dp"
+            android:layout_marginEnd="6dp"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/shopping_crt"
+            android:src="@drawable/ic_shopping_cart_black_24dp"
+            android:layout_width="wrap_content"
+            android:layout_toStartOf="@+id/dot_menu"
+            android:layout_centerVertical="true"
+            android:onClick="toMenu"
+            android:padding="3dp"
+            android:layout_marginEnd="12dp"
+            android:layout_height="wrap_content"/>
+
+
+
+        <TextView
+            android:text="1"
+            android:textSize="12sp"
+            android:id="@+id/shopping_crt_num"
+            android:textColor="@color/colorAccent"
+            android:background="@drawable/cerclebackgroundpink"
+            android:paddingEnd="3dp"
+            android:paddingStart="4dp"
+            android:layout_marginEnd="6dp"
+            android:layout_alignTop="@+id/shopping_crt"
+            android:layout_width="wrap_content"
+            android:layout_toStartOf="@+id/dot_menu"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/wishTop"
+            android:src="@drawable/ic_favorite_black_24dp"
+            android:layout_width="wrap_content"
+            android:layout_toStartOf="@+id/shopping_crt"
+            android:layout_centerVertical="true"
+            android:onClick="toMenu"
+            android:padding="3dp"
+            android:layout_marginEnd="8dp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/shopping_wish_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/wishTop"
+            android:layout_marginStart="-16dp"
+            android:layout_marginEnd="6dp"
+            android:layout_toEndOf="@+id/wishTop"
+            android:background="@drawable/cerclebackgroundpink"
+            android:paddingStart="4dp"
+            android:paddingEnd="3dp"
+            android:text="4"
+            android:textColor="@color/colorAccent"
+            android:textSize="12sp" />
+
+        <!--        <TextView-->
+<!--            android:text="@string/let_s_chat"-->
+<!--            android:textSize="17sp"-->
+<!--            android:layout_toEndOf="@+id/howItWorkid"-->
+<!--            android:layout_marginStart="12dp"-->
+<!--            android:id="@+id/letCh_id"-->
+<!--            android:textStyle="bold"-->
+<!--            android:textColor="@color/colorLinks"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"/>-->
+
+<!--        <TextView-->
+<!--            android:text="@string/how_it2"-->
+<!--            android:textSize="17sp"-->
+<!--            android:layout_marginStart="10dp"-->
+<!--            android:textStyle="bold"-->
+<!--            android:id="@+id/how_it2"-->
+<!--            android:layout_toEndOf="@+id/letCh_id"-->
+<!--            android:textColor="@color/colorLinks"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"/>-->
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
